@@ -1,0 +1,97 @@
+﻿<Window x:Class="WPFlesson1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFlesson1"
+        mc:Ignorable="d"
+        Title="Calc" Height="450" Width="300">
+<!--ROUND1-->
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button Margin="2" Foreground="Red" >Red</Button>
+            <Button Margin="2" Foreground="AliceBlue" >AliceBlue</Button>
+            <Button Margin="2" Foreground="AntiqueWhite" >AntiqueWhite</Button>
+            <Button Margin="2" Foreground="Aqua" >Aqua</Button>
+            <Button Margin="2" Foreground="Aquamarine" >Aquamarine</Button>
+            <Button Margin="2" Foreground="Azure" >Azure</Button>
+            <Button Margin="2" Foreground="Beige" >Beige</Button>
+            <Button Margin="2" Foreground="Bisque" >Bisque</Button>
+            <Button Margin="2" Foreground="Black" >Black</Button>
+            <Button Margin="2" Foreground="BlanchedAlmond" >BlanchedAlmond</Button>
+            <Button Margin="2" Foreground="Blue" >Blue</Button>
+            <Button Margin="2" Foreground="BlueViolet" >BlueViolet</Button>
+            <Button Margin="2" Foreground="Brown" >Brown</Button>
+            <Button Margin="2" Foreground="BurlyWood" >BurlyWood</Button>
+            <Button Margin="2" Foreground="CadetBlue" >CadetBlue</Button>
+            <Button Margin="2" Foreground="Chartreuse" >Chartreuse</Button>
+            <Button Margin="2" Foreground="Chocolate" >Chocolate</Button>
+        </WrapPanel>
+    </Grid>-->
+
+    
+        
+    
+    
+<!--ROUND2-->
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="25" MinHeight="15"/>
+            <RowDefinition MaxHeight="50" MinHeight="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="input" Grid.Row="0" Margin="3,3,3,3" FontSize="14" PreviewKeyDown="input_PreviewKeyDown"></TextBox>
+
+        <TextBox x:Name="result" Grid.Row="1" Margin="3,3,3,3" FontSize="27" FontWeight="Bold"></TextBox>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="ceKey" Grid.Column="0" Grid.Row="0" FontWeight="UltraBold">CE</Button>
+            <Button x:Name="cKey" Grid.Column="1" Grid.Row="0" FontWeight="UltraBold">C</Button>
+            <Button x:Name="deleteKey" Grid.Column="2" Grid.Row="0" FontWeight="UltraBold"> &lt; </Button>
+            <Button x:Name="plusKey" Grid.Column="3" Grid.Row="0" FontWeight="UltraBold">+</Button>
+
+            <Button x:Name="oneKey" Grid.Column="0" Grid.Row="1" FontWeight="UltraBold">1</Button>
+            <Button x:Name="twoKey" Grid.Column ="1" Grid.Row="1" FontWeight="UltraBold">2</Button>
+            <Button x:Name="threeKey" Grid.Column="2" Grid.Row="1" FontWeight="UltraBold">3</Button>
+            <Button x:Name="minusKey" Grid.Column="3" Grid.Row="1" FontWeight="UltraBold">-</Button>
+
+            <Button x:Name="fourKey" Grid.Column="0" Grid.Row="2" FontWeight="UltraBold">4</Button>
+            <Button x:Name="fiveKey" Grid.Column="1" Grid.Row="2" FontWeight="UltraBold">5</Button>
+            <Button x:Name="sixKey" Grid.Column="2" Grid.Row="2" FontWeight="UltraBold">6</Button>
+            <Button x:Name="divideKey" Grid.Column="3" Grid.Row="2" FontWeight="UltraBold">/</Button>
+
+            <Button x:Name="sevenKey" Grid.Column="0" Grid.Row="3" FontWeight="UltraBold">7</Button>
+            <Button x:Name="eightKey" Grid.Column="1" Grid.Row="3" FontWeight="UltraBold">8</Button>
+            <Button x:Name="nineKey" Grid.Column="2" Grid.Row="3" FontWeight="UltraBold">9</Button>
+            <Button x:Name="asteriskKey" Grid.Column="3" Grid.Row="3" FontWeight="UltraBold">*</Button>
+
+            <Button x:Name="dotKey" Grid.Column="0" Grid.Row="4" FontWeight="UltraBold">.</Button>
+            <Button x:Name="zeroKey" Grid.Column="1" Grid.Row="4" FontWeight="UltraBold">0</Button>
+            <Button x:Name="equalKey" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" FontWeight="UltraBold" FontSize="15">=</Button>
+
+        </Grid>
+    </Grid>
+</Window>
