@@ -27,6 +27,8 @@ namespace WPFLessonCalc.Models
             return num;
         }
 
+        List<int> list = new List<int>();
+
         public bool isDotet() 
         {
             return doted;

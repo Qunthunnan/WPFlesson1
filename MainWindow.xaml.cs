@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using WPFLessonCalc.Models;
 
 namespace WPFlesson1
 {
@@ -23,31 +24,88 @@ namespace WPFlesson1
 
     public partial class MainWindow : Window
     {
-        static double сalculateString(string expression)
-        {
-            return 0;
-        }
-
-        static bool сheckString(string expression) 
-        {
-           
-            return false;
-        }
-
         public MainWindow()
         {
             InitializeComponent();
-            
         }
 
-        private void input_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
+       
+        Num num = new Num();
+        //List<operation> operations = new List<operation>();
+        List<Num> nums = new List<Num>();
 
-            if (e.Key == Key.Enter)
+        private void oneKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(1);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void twoKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(2);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void threeKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(3);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void fourKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(4);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void fiveKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(5);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void sixKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(6);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void sevenKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(7);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void eightKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(8);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void nineKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.addNum(9);
+            input.Text = num.getNum().ToString();
+        }
+
+        private void zeroKey_Click(object sender, RoutedEventArgs e)
+        {
+            if (num.getNum() != 0)
             {
-                result.Text = "";
-                result.Text = сalculateString(input.Text).ToString();
+                num.addNum(0);
+                input.Text = num.getNum().ToString();
             }
+        }
+
+        private void plusKey_Click(object sender, RoutedEventArgs e)
+        {
+            nums.Add(num);
+            //operations.Add(operation.Plus);
+        }
+
+        private void equalKey_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
