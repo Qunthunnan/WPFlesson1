@@ -10,16 +10,25 @@ namespace WPFLessonCalc.Models
     {
         double num = 0;
         bool doted = false;
+        bool blockdot = false;
 
         public void addNum(int num)
         {
-            this.num = Convert.ToDouble(this.num.ToString() + num.ToString());
+            if (doted == true)
+            {
+                this.num = Convert.ToDouble(this.num.ToString() + "," + num.ToString());
+                doted = false;
+            }
+            else
+            {
+                this.num = Convert.ToDouble(this.num.ToString() + num.ToString());
+            }
         }
 
-        public void addDotNum(int num) 
+        public void addDot() 
         {
-            this.num = this.num = Convert.ToDouble(this.num.ToString() + "." + num.ToString());
             doted = true;
+            blockdot = true;
         }
 
         public double getNum()
@@ -29,9 +38,9 @@ namespace WPFLessonCalc.Models
 
         List<int> list = new List<int>();
 
-        public bool isDotet() 
+        public bool isBlockDot() 
         {
-            return doted;
+            return blockdot;
         }
     }
 }

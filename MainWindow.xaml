@@ -76,19 +76,19 @@
             <Button x:Name="oneKey" Grid.Column="0" Grid.Row="1" FontWeight="UltraBold" Click="oneKey_Click">1</Button>
             <Button x:Name="twoKey" Grid.Column ="1" Grid.Row="1" FontWeight="UltraBold" Click="twoKey_Click">2</Button>
             <Button x:Name="threeKey" Grid.Column="2" Grid.Row="1" FontWeight="UltraBold" Click="threeKey_Click">3</Button>
-            <Button x:Name="minusKey" Grid.Column="3" Grid.Row="1" FontWeight="UltraBold">-</Button>
+            <Button x:Name="minusKey" Grid.Column="3" Grid.Row="1" FontWeight="UltraBold" Click="minusKey_Click">-</Button>
 
             <Button x:Name="fourKey" Grid.Column="0" Grid.Row="2" FontWeight="UltraBold" Click="fourKey_Click">4</Button>
             <Button x:Name="fiveKey" Grid.Column="1" Grid.Row="2" FontWeight="UltraBold" Click="fiveKey_Click">5</Button>
             <Button x:Name="sixKey" Grid.Column="2" Grid.Row="2" FontWeight="UltraBold" Click="sixKey_Click">6</Button>
-            <Button x:Name="divideKey" Grid.Column="3" Grid.Row="2" FontWeight="UltraBold">/</Button>
+            <Button x:Name="divideKey" Grid.Column="3" Grid.Row="2" FontWeight="UltraBold" Click="divideKey_Click">/</Button>
 
             <Button x:Name="sevenKey" Grid.Column="0" Grid.Row="3" FontWeight="UltraBold" Click="sevenKey_Click">7</Button>
             <Button x:Name="eightKey" Grid.Column="1" Grid.Row="3" FontWeight="UltraBold" Click="eightKey_Click">8</Button>
             <Button x:Name="nineKey" Grid.Column="2" Grid.Row="3" FontWeight="UltraBold" Click="nineKey_Click">9</Button>
-            <Button x:Name="asteriskKey" Grid.Column="3" Grid.Row="3" FontWeight="UltraBold">*</Button>
+            <Button x:Name="asteriskKey" Grid.Column="3" Grid.Row="3" FontWeight="UltraBold" Click="asteriskKey_Click">*</Button>
 
-            <Button x:Name="dotKey" Grid.Column="0" Grid.Row="4" FontWeight="UltraBold">.</Button>
+            <Button x:Name="dotKey" Grid.Column="0" Grid.Row="4" FontWeight="UltraBold" Click="dotKey_Click">,</Button>
             <Button x:Name="zeroKey" Grid.Column="1" Grid.Row="4" FontWeight="UltraBold" Click="zeroKey_Click">0</Button>
             <Button x:Name="equalKey" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" FontWeight="UltraBold" FontSize="15" Click="equalKey_Click">=</Button>
 
