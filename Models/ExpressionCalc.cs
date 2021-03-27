@@ -52,11 +52,13 @@ namespace WPFLessonCalc.Models
         public double calculateExpression() 
         {
             Operation curent = head;
+            double curentResult = 0;
             while (curent != null)
             {
                 if (curent.operation == eOperation.Multiply || curent.operation == eOperation.Divide && curent.resultStatus != true)
                 {
                     curent.calculateOperation();
+                    curentResult = curent.result;
                 }
 
                 if (curent.nextOperation != null)
@@ -76,6 +78,7 @@ namespace WPFLessonCalc.Models
                 if (curent.resultStatus != true)
                 {
                     curent.calculateOperation();
+                    curentResult = curent.result;
                 }
 
                 if (curent.nextOperation != null)
@@ -86,9 +89,9 @@ namespace WPFLessonCalc.Models
                 {
                     break;
                 }
-            } 
+            }
 
-            return curent.result;
+            return curentResult;
         }
 
         //public override string ToString()

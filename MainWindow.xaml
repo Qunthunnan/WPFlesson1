@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFlesson1"
         mc:Ignorable="d"
-        Title="Calc" Height="450" Width="300">
+        Title="Calc" Height="450" Width="300" KeyDown="Window_KeyDown">
 <!--ROUND1-->
     <!--<Grid>
         <Grid.ColumnDefinitions>
@@ -68,9 +68,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="ceKey" Grid.Column="0" Grid.Row="0" FontWeight="UltraBold">CE</Button>
-            <Button x:Name="cKey" Grid.Column="1" Grid.Row="0" FontWeight="UltraBold">C</Button>
-            <Button x:Name="deleteKey" Grid.Column="2" Grid.Row="0" FontWeight="UltraBold"> &lt; </Button>
+            <Button x:Name="ceKey" Grid.Column="0" Grid.Row="0" FontWeight="UltraBold" Click="ceKey_Click">CE</Button>
+            <Button x:Name="cKey" Grid.Column="1" Grid.Row="0" FontWeight="UltraBold" Click="cKey_Click">C</Button>
+            <Button x:Name="deleteKey" Grid.Column="2" Grid.Row="0" FontWeight="UltraBold" Click="deleteKey_Click"> &lt; </Button>
             <Button x:Name="plusKey" Grid.Column="3" Grid.Row="0" FontWeight="UltraBold" Click="plusKey_Click">+</Button>
 
             <Button x:Name="oneKey" Grid.Column="0" Grid.Row="1" FontWeight="UltraBold" Click="oneKey_Click">1</Button>

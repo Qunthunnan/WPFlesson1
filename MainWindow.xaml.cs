@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Diagnostics;
 using WPFLessonCalc.Models;
 
+
 namespace WPFlesson1
 {
     /// <summary>
@@ -278,6 +279,83 @@ namespace WPFlesson1
             operation = ExpressionCalc.eOperation.Multiply;
             num = null;
             num = new Num();
+            input.Text = num.getNum().ToString();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.NumPad0 || e.Key == Key.D0)
+            {
+                zeroKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad1 || e.Key == Key.D1)
+            {
+                oneKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad2 || e.Key == Key.D2)
+            {
+                twoKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad3 || e.Key == Key.D3)
+            {
+                threeKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad4 || e.Key == Key.D4)
+            {
+                fourKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad5 || e.Key == Key.D5)
+            {
+                fiveKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad6 || e.Key == Key.D6)
+            {
+                sixKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad7 || e.Key == Key.D7)
+            {
+                sevenKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad8 || e.Key == Key.D8)
+            {
+                eightKey_Click(this, null);
+            }
+
+            if (e.Key == Key.NumPad9 || e.Key == Key.D0)
+            {
+                nineKey_Click(this, null);
+            }
+        }
+
+        private void ceKey_Click(object sender, RoutedEventArgs e)
+        {
+            num = null;
+            num = new Num();
+            input.Text = num.getNum().ToString();
+        }
+
+        private void cKey_Click(object sender, RoutedEventArgs e)
+        {
+            num = null;
+            num = new Num();
+            state = 0;
+            expression = null;
+            expression = new ExpressionCalc();
+            input.Text = num.getNum().ToString();
+            view.Text = "";
+        }
+
+        private void deleteKey_Click(object sender, RoutedEventArgs e)
+        {
+            num.remooveNum();
             input.Text = num.getNum().ToString();
         }
     }

@@ -14,14 +14,26 @@ namespace WPFLessonCalc.Models
 
         public void addNum(int num)
         {
-            if (doted == true)
+            if (this.num.ToString().Length < 15)
             {
-                this.num = Convert.ToDouble(this.num.ToString() + "," + num.ToString());
-                doted = false;
+                if (doted == true)
+                {
+                    this.num = Convert.ToDouble(this.num.ToString() + "," + num.ToString());
+                    doted = false;
+                }
+                else
+                {
+                    this.num = Convert.ToDouble(this.num.ToString() + num.ToString());
+                }
             }
-            else
+            
+        }
+
+        public void remooveNum() 
+        {
+            if (num.ToString().Length > 0)
             {
-                this.num = Convert.ToDouble(this.num.ToString() + num.ToString());
+                num = Convert.ToDouble(num.ToString().Remove(num.ToString().Length - 1));
             }
         }
 
